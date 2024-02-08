@@ -7,7 +7,7 @@ import {
   Container,
 } from "@chakra-ui/react";
 import { HamburgerIcon, SearchIcon, SunIcon } from "@chakra-ui/icons";
-import { Link } from "react-router-dom";
+import { Link as ReactRouterLink } from "react-router-dom";  // 이 줄을 추가하세요
 import styled from "styled-components";
 import { lighten } from "polished";
 import Gnb from "./Gnb";
@@ -140,34 +140,15 @@ const Header = () => {
           display={["flex"]}
           h={"60px"}
           alignItems={"center"}
-          justifyContent={"space-between"}
+          flexDirection={"column"}
         >
           <Heading as={"h1"} fontSize={24} color={"white"}>
-            <Link to="/">Dashboard</Link>
+            <Link as={ReactRouterLink} to="/">
+              <span>HORIZON </span>
+              <span>FREE</span></Link>
           </Heading>
 
           <Gnb />
-          <ButtonGroup color={"white"}>
-            <IconButton
-              variant="ghost"
-              aria-label="Search database"
-              icon={<SearchIcon />}
-              color={"white"}
-            />
-            <IconButton
-              variant="ghost"
-              aria-label="Light database"
-              icon={<SunIcon />}
-              color={"white"}
-            />
-            <IconButton
-              variant="ghost"
-              aria-label="전체 메뉴"
-              icon={<HamburgerIcon />}
-              display={{ sm: "block", lg: "none" }}
-              color={"white"}
-            />
-          </ButtonGroup>
         </Container>
       </Box>
     </Box>
