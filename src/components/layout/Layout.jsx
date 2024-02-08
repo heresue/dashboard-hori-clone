@@ -26,7 +26,7 @@ const Layout = (props) => {
 
 export const LayoutNone = () => {
   return (
-    <Box bg={'skyblue'} display={"flex"} flexDir={"column"} minH={"100vh"}>
+    <Box bg={"skyblue"} display={"flex"} flexDir={"column"} minH={"100vh"}>
       <Box as="main" id="main" flexGrow={1}>
         <Outlet />
       </Box>
