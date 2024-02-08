@@ -1,0 +1,16 @@
+@import 'variables';
+// @import 'common/all';
+// @import 'components/all';
+// @import 'layouts/all';
+// @import 'pages/all';
+// @import 'templates/all';
+
+
+// @use 'vuetify' with (
+//     // variables go here
+//     $background: $baseBackground
+// );
+// vuetify 라이브러리에서는 comm.scss의 파일명을 style로 지정해주었기 때문에, style로 되어있음. (이렇게 지정된 경우가 아니라면 comm으로 사용해도 됨)
+
+
+// Watch Sass 할 필요 없음 (react-sass 설치)
