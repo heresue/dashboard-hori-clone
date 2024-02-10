@@ -26,6 +26,7 @@ const Header = () => {
         <Link as={ReactRouterLink} to="/">
           <strong>HORIZON</strong> FREE
         </Link>
+        <Gnb/>
       </Heading>
 
       <Gnb />

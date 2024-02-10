@@ -4,6 +4,7 @@ import Header from "./Header";
 import ContainerLg from "./Container";
 import { Outlet } from "react-router-dom";
 
+
 const Layout = (props) => {
   return (
     // 인라인: 카멜표기법 축약형

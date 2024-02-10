@@ -1,11 +1,12 @@
-import { ListItem, UnorderedList } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
+import { Link, ListItem, UnorderedList } from "@chakra-ui/react";
+import { Link as ReactRouterLink } from 'react-router-dom'
 import { FaCartShopping } from "react-icons/fa6";
 import { AiFillHome } from "react-icons/ai";
 import { IoStatsChart } from "react-icons/io5";
 import { FaUser } from "react-icons/fa";
 import { IoMdLogIn } from "react-icons/io";
+
+// import { Link as ReactRouterLink } from 'react-router-dom'
 
 const Gnb = () => {
   const navArr = [
@@ -24,15 +25,13 @@ const Gnb = () => {
     >
       {navArr.map((item, index) => (
         <ListItem>
-          <Link></Link>
+          <Link as={ReactRouterLink} to={navArr.path}>{navArr.icon}{navArr.name}</Link>
         </ListItem>
       ))}
     </UnorderedList>
   );
 };
 
-const ListStyle = styled(ListItem)`
-  margin-bottom: 12px;
-`;
+
 
 export default Gnb;
